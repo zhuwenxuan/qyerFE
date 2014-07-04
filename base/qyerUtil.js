@@ -6,7 +6,7 @@
 ! function() {
 
 	requirejs.config({
-		baseUrl: 'http://static.qyer.com/m',
+		baseUrl: 'http://fe.qyer.com/m',
 		map: {
 			'*': {
 				'css': 'basic/js/require-css'
