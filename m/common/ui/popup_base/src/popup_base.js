@@ -1,4 +1,4 @@
-define('common/ui/popup_base/popup_base', ["css!common/ui/popup_base/popup_base.css"], function() {
+define('popup_base', ["css!common/ui/popup_base/popup_base.css"], function() {
     var para, status, type;
     var _private = {
         $popup: null,
