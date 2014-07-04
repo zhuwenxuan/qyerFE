@@ -1,0 +1,20 @@
+.ui-m-input{width:100%;height:34px;text-indent:9px;font-size:14px;line-height:24px;border:1px solid #e2e2e2;border-radius:2px;box-shadow: inset 0px 2px -webkit-linear-gradient(top,#e2e2e2,#fff);}
+
+
+.lgInputBox{margin:10px;}
+.lgButtonBox{margin:15px 16px 0px 14px;}
+.lgGapLine{margin:24px 8px;background:#ccc;height:1px;text-align:center;}
+.lgGapLine span{position:relative;display:inline-block;top:-12px;padding:0 14px;background:#FFF;color:#9ea3ab;font-size:14px;line-height:24px;}
+.lgMultiButtonBox{margin:0px 16px 0 14px;text-align:center;white-space: nowrap;}
+.lgMultiButtonBox .sina{display:inline-block;margin-right:10px;text-align:center;padding:0px 10px;height:36px;background:#f26622;line-height:36px;color:#FFF;border-radius:3px;}
+.lgMultiButtonBox .qq{background:#4998cc;display:inline-block;text-align:center;padding:0px 10px;height:36px;line-height:36px;color:#FFF;border-radius:3px;}
+.lgMultiButtonBox .sina span{display:block;padding:0px 0px 0px 37px;background:url("../images/icon-sina.png") no-repeat left center;background-size:30px 24px;}
+.lgMultiButtonBox .qq span{display:block;padding:0px 0px 0px 39px;background:url("../images/icon-qq.png") no-repeat left center;background-size:30px 24px;}
+.lgCaptchaBox {margin:10px 104px 10px 10px;white-space: nowrap;}
+.lgCaptchaBox input{display:inline-block;}
+.lgCaptchaBox .captcha{display:inline-block;vertical-align:bottom;margin-left:10px;width:84px;height:34px;}
+
+.lgState{width:100%;text-align:center;margin-top:155px;}
+.lgstate .icon{line-height:0;}
+.lgstate .warn{font-size:18px;line-height:18px;margin-top:15px;}
+.lgstate .exception{font-size:16px;line-height:16px;margin:30px auto;}

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+.ui-m-input{width:100%;height:34px;text-indent:9px;font-size:14px;line-height:24px;border:1px solid #e2e2e2;border-radius:2px;box-shadow: inset 0px 2px -webkit-linear-gradient(top,#e2e2e2,#fff);}
+<link href="http://fe.qyer.com/m/basic/css/base.css" rel="stylesheet" type="text/css" />
+<script src="http://fe.qyer.com/lib/zepto.js"></script>
+<script src="http://fe.qyer.com/lib/zepto-touch.js"></script>
+<script src="http://fe.qyer.com/lib/zepto-fx.js"></script>
+<script src="http://fe.qyer.com/lib/require.js"></script>
+<script src="http://fe.qyer.com/lib/qyerUtil.js"></script>
+
+<style>
+	.qui-page > p {
+		margin-top:100px;
+	}
+	span{
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+		margin: 50px;
+		background-color:  #888;
+	}
+</style>
+
+<script>
+
+	$(function(){
+		$('#p1').on(qyerUtil.EVENT.CLICK,show1);
+		$('#p2').on(qyerUtil.EVENT.CLICK,show2);
+		$('#p3').on(qyerUtil.EVENT.CLICK,show3);
+		$('#p4').on(qyerUtil.EVENT.CLICK,show4);
+	});
+
+	function closePopup(){
+		require(['common/ui/popup_base/popup_base'],function(popup){
+			popup.hide();
+		});
+	}
+
+	function show1(){
+		require(['common/ui/popup_base/popup_base'],function(popup){
+			popup.show({
+				type:1,
+				contentHTML:'第一种类型的展示<br />（出现后3秒自动消失，外部控制的逻辑，非控件本身逻辑）',
+				onShow:function(){
+					alert('onShow 回调');
+				},
+				onHide:function(){
+					alert('onHide 回调');
+				}
+			});
+
+			setTimeout(function(){
+				popup.hide();
+			},3000)
+		});
+	}
+	function show2(){
+		require(['common/ui/popup_base/popup_base'],function(popup){
+			popup.show({
+				type:2,
+				contentHTML:'第2种类型的展示 <br /><input type="button" value="关闭" onclick="closePopup()" /> '
+			});
+		});
+	}
+	function show3(){
+		require(['common/ui/popup_base/popup_base'],function(popup){
+			popup.show({
+				type:1,
+				hasHead:true,
+	            okBtnText:"点击不消失",
+	            cancelBtnText:"取消",
+	            title:"标题，标题，",
+	            onOK:function () {
+	            	alert('点击了确定按钮,但内容未通过验证');
+	            	return false;
+	            },
+	            onCancel:function () {
+	            	alert('点击了取消按钮');
+	            },
+				contentHTML:'第3种类型的展示 <br /> '
+			});
+		});
+	}
+
+	function show4(){
+		require(['common/ui/popup_base/popup_base'],function(popup){
+			popup.show({
+				type:1,
+				hasHead:true,
+	            okBtnText:"qd",
+	            okBtnIpg:'header-ok',
+	            cancelBtnText:"qx",
+	            cancelBtnIpg:'header-cancel',
+	            title:"标题，标题，",
+	            onOK:function () {
+	            	alert('点击了确定按钮');
+	            },
+	            onCancel:function () {
+	            	alert('点击了取消按钮');
+	            },
+				contentHTML:'<input type="button" value="点击动态设置选项" onclick="setOption()" />'
+			});
+		});
+	}
+
+
+	function setOption(){
+		require(['common/ui/popup_base/popup_base'],function(popup){
+			popup.setOption({
+			 	contentHTML:'设置了显示内容，设置了标题，设置了ok按钮文字，设置了取消按钮文字，禁用了 确定按钮',
+	            okBtnText:'oo',
+	            cancelBtnText:'cc',
+	            okBtnDisabled:true,
+	            title:'tttt'
+			});
+		});
+
+
+
+	}
+</script>
+
+</head>
+
+<body>
+	<div class="qui-page">
+
+		<p>
+			<p>第1种类型，背景模糊或者半透明，最大宽度320</p>
+			<input id="p1" type="button" value="第1种类型" />
+		</p>
+		<p>
+			<p>第2种类型，背景实色	，最大宽度640</p>
+			<input id="p2" type="button" value="第2种类型"/>
+		</p>
+
+		<p>
+			<p>第3种类型，点击按钮，运行回掉，弹层不消失</p>
+			<input id="p3" type="button" value="第3种类型"/>
+		</p>
+
+		<p>
+			自定义<br />
+			带头部<br />
+			自定义确定按钮文字为 “qd” <br />
+			自定义取消按钮文字为 “qx” <br />
+			自定义头部标题为 “标题，标题，” <br />
+			<input id="p4" type="button" value="自定义"/>
+		</p>
+
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+		<span> AAA </span>
+	</div>
+</body>
+
+</html>
