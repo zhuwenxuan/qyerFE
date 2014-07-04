@@ -1,7 +1,9 @@
 require.config({
 	baseUrl: 'http://fe.qyer.com/m',
-	path:{
-		zepto:"base/js/zepto"
+	paths:{
+		zepto:"base/js/zepto",
+		zepto-touch:"base/js/zepto-touch",
+		zepto-fx:"base/js/zepto-fx"
 	},
 	map: {
 		'*': {
