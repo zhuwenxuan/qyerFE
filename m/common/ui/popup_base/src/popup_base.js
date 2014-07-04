@@ -31,14 +31,14 @@ define('popup_base', ["css!common/ui/popup_base/popup_base.css"], function() {
                 }
             }, 10), false);
 */
-            this.$okBtn.on(qyerUtil.EVENT.CLICK, function() {
+            this.$okBtn.on("click", function() {
                 if (para.onOK) {
                     if (para.onOK() !== false) {
                         _public.hide()
                     }
                 }
             });
-            this.$cancelBtn.on(qyerUtil.EVENT.CLICK, function() {
+            this.$cancelBtn.on("click", function() {
                 if (para.onCancel) {
                     para.onCancel()
                 }
