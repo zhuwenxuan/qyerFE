@@ -156,7 +156,7 @@ define('popup_base', ["css!common/ui/popup_base/popup_base.css"], function() {
             //$("body > .qui-page").removeClass("qui-page-blur");
 
             if (para&&!para.enableBodyScroll) {
-                window.qyerUtil.enableBodyScroll()
+                // window.qyerUtil.enableBodyScroll()
             }
             //setTimeout(function() {
                 if (para&&typeof para.onHide == 'function') {
