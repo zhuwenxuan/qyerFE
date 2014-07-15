@@ -8,7 +8,7 @@ require.config({
 	},
 	map: {
 		'*': {
-			'css': 'basic/js/require-css'
+			'css': '../lib/require-css'
 		}
 	}
 })
